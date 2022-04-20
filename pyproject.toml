@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "py-arbitrage"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+packages = [
+    { include = "py_arbitrage", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+binance-connector = "^1.11.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+arbitrage = 'py_arbitrage.entry:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "mirror"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
